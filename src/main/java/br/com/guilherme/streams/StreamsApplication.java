@@ -9,6 +9,7 @@ import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class StreamsApplication {
@@ -21,6 +22,14 @@ public class StreamsApplication {
 			List<Pessoa> lista = gson.fromJson(jsonStr, type);
 
 			lista.forEach(p->System.out.println(p));
+			Pessoa novaPessoa = new Pessoa(151, "Guilherme", "guilherme@santos.com", "987.456.321-80", 30);
+
+			//List<Pessoa> res1 = lista.stream().toList();
+			List<Pessoa> res2 = lista.stream().collect(Collectors.toList());
+
+			res2.add(novaPessoa);
+			System.out.println(res2);
+
 		} catch(Exception ex){
 			ex.printStackTrace();
 		}
