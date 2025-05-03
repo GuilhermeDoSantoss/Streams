@@ -21,7 +21,7 @@ public class StreamsApplication {
 			Type type = new TypeToken<List<Pessoa>>() {}.getType();
 			List<Pessoa> lista = gson.fromJson(jsonStr, type);
 
-			DiaGenerico dia = new Dia03();
+			DiaGenerico dia = new Dia04();
 
 			dia.executarDesafio(lista);
 
