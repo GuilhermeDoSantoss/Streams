@@ -31,6 +31,7 @@ List<String> nomesComG = nomes.stream()
 
 ## 📌 Requisitos
 
-Java 17+
-Maven 3.8+
+Java 17
+
+Maven 3.8
 
