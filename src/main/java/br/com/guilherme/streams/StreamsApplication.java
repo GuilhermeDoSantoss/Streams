@@ -21,14 +21,9 @@ public class StreamsApplication {
 			Type type = new TypeToken<List<Pessoa>>() {}.getType();
 			List<Pessoa> lista = gson.fromJson(jsonStr, type);
 
-			lista.forEach(p->System.out.println(p));
-			Pessoa novaPessoa = new Pessoa(151, "Guilherme", "guilherme@santos.com", "987.456.321-80", 30);
+			DiaGenerico dia = new Dia03();
 
-			//List<Pessoa> res1 = lista.stream().toList();
-			List<Pessoa> res2 = lista.stream().collect(Collectors.toList());
-
-			res2.add(novaPessoa);
-			System.out.println(res2);
+			dia.executarDesafio(lista);
 
 		} catch(Exception ex){
 			ex.printStackTrace();
